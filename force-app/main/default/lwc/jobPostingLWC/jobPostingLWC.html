@@ -2,14 +2,25 @@
   @description       : 
   @author            : Akash Yadav
   @group             : 
-  @last modified on  : 07-30-2025
+  @last modified on  : 07-31-2025
   @last modified by  : Akash Yadav
 -->
 <template>
     <lightning-card title="Position List">
+        <lightning-combobox
+            name="Department"
+            label="Department"
+            value={value}
+            placeholder="Select Department"
+            options={options}
+            onchange={handleChange}>
+        </lightning-combobox>
+
+        <p>Selected value is: {value}</p>
+        
         <lightning-datatable
             key-field="Id"
-            data={jobPostings}
+            data={filteredJobPostings}
             columns={columns}>
         </lightning-datatable>
     </lightning-card>

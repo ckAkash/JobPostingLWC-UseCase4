@@ -2,7 +2,7 @@
  * @description       : 
  * @author            : Akash Yadav
  * @group             : 
- * @last modified on  : 07-30-2025
+ * @last modified on  : 07-31-2025
  * @last modified by  : Akash Yadav
 **/
 public with sharing class JobPostingController {
@@ -17,7 +17,6 @@ public with sharing class JobPostingController {
         try {
             List<Job_Posting__c> jobPostingRecords = [SELECT Id,
                                                             Name,
-                                                            Employment_Website__c,
                                                             Position__r.Name,
                                                             Position__r.Location__c,
                                                             Position__r.Status__c,
