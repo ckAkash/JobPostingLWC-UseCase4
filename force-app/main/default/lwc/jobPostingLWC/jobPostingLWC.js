@@ -33,7 +33,6 @@ export default class JobPostingLwc extends LightningElement {
                 };
             });
 
-            // Initially show all job postings
             this.filteredJobPostings = this.jobPostings;
             console.log('Transformed data for datatable:', this.jobPostings);
         } else if (error) {
@@ -52,7 +51,7 @@ export default class JobPostingLwc extends LightningElement {
 
     handleChange(event) {
         this.value = event.detail.value;
-        this.filterJobPostings(); // Apply filter when department is selected
+        this.filterJobPostings(); 
     }
 
     filterJobPostings() {
